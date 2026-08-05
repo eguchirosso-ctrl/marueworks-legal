@@ -117,7 +117,7 @@ nav a {
 
 .document-links {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 20px;
   margin-top: 28px;
 }
@@ -296,5 +296,89 @@ nav a {
     margin-top: 20px;
     padding: 24px 20px;
     border-radius: 16px;
+  }
+}
+
+.support-page {
+  margin-block: 48px 72px;
+}
+
+.support-hero,
+.support-section,
+.contact-card {
+  margin-bottom: 24px;
+  padding: clamp(24px, 5vw, 42px);
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: var(--paper);
+  box-shadow: var(--shadow);
+}
+
+.support-hero {
+  background: linear-gradient(135deg, var(--paper), var(--mint-pale));
+}
+
+.support-hero h1 {
+  margin: 0 0 12px;
+  color: var(--navy);
+  font-size: clamp(2rem, 6vw, 3rem);
+  line-height: 1.3;
+}
+
+.support-hero p,
+.support-section > p {
+  color: var(--muted);
+}
+
+.faq-list {
+  display: grid;
+  gap: 14px;
+}
+
+.faq-item {
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: #fbfcfe;
+}
+
+.faq-item h3 {
+  margin: 0 0 8px;
+  color: var(--navy);
+  font-size: 1.05rem;
+}
+
+.faq-item p {
+  margin: 0;
+}
+
+.contact-button {
+  display: inline-flex;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 12px;
+  padding: 12px 20px;
+  border-radius: 12px;
+  background: var(--navy);
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.contact-button:hover {
+  background: var(--navy-soft);
+}
+
+.notice {
+  padding: 16px 18px;
+  border-left: 4px solid var(--mint);
+  border-radius: 8px;
+  background: var(--mint-pale);
+}
+
+@media (max-width: 900px) {
+  .document-links {
+    grid-template-columns: 1fr;
   }
 }
