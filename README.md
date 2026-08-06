@@ -11,4 +11,4 @@
 
 - Legal name: Takahisa Eguchi
 - Trade name: MARUE WORKS
-- Contact: marueworks.support@gmail.com
+- Contact: support@marueworks.com
