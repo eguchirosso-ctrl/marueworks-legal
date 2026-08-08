@@ -1,6 +1,6 @@
 # MARUE WORKS Legal & Support
 
-「AIサブスク管理」の公開用法務文書とサポートページです。
+「AIサブスクノート」の公開用法務文書とサポートページです。
 
 - [公開サイト](https://eguchirosso-ctrl.github.io/marueworks-legal/)
 - [サポート](https://eguchirosso-ctrl.github.io/marueworks-legal/support.html)
