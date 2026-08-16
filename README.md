@@ -15,6 +15,12 @@ MARUE WORKS のアプリの公開用法務文書とサポートページです�
 - [サポート](https://marueworks.com/my-gourmet-report/support/)
 - [プライバシーポリシー](https://marueworks.com/my-gourmet-report/privacy/)
 
+### ガジェットライフノート
+
+- [サポート](https://marueworks.com/gadget-life-note/support/)
+- [プライバシーポリシー](https://marueworks.com/gadget-life-note/privacy/)
+- [利用規約](https://marueworks.com/gadget-life-note/terms/)
+
 ## Operator
 
 - Legal name: Takahisa Eguchi
