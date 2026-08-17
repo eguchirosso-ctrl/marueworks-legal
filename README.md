@@ -15,7 +15,7 @@ MARUE WORKS のアプリの公開用法務文書とサポートページです�
 - [サポート](https://marueworks.com/my-gourmet-report/support/)
 - [プライバシーポリシー](https://marueworks.com/my-gourmet-report/privacy/)
 
-### でじモノ手帳
+### デジもの手帳
 
 <!-- URL は gadget-life-note のままです（公開済みのため変更しません）。 -->
 
