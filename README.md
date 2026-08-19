@@ -23,6 +23,12 @@ MARUE WORKS のアプリの公開用法務文書とサポートページです�
 - [プライバシーポリシー](https://marueworks.com/gadget-life-note/privacy/)
 - [利用規約](https://marueworks.com/gadget-life-note/terms/)
 
+### Gadgetory
+
+- [Support](https://marueworks.com/gadgetory/support/)
+- [Privacy Policy](https://marueworks.com/gadgetory/privacy/)
+- [Terms of Use](https://marueworks.com/gadgetory/terms/)
+
 ## Operator
 
 - Legal name: Takahisa Eguchi
