@@ -29,6 +29,12 @@ MARUE WORKS のアプリの公開用法務文書とサポートページです�
 - [Privacy Policy](https://marueworks.com/gadgetory/privacy/)
 - [Terms of Use](https://marueworks.com/gadgetory/terms/)
 
+### N3 Bridge
+
+- [Support](https://marueworks.com/n3bridge/support/)
+- [Privacy Policy](https://marueworks.com/n3bridge/privacy/)
+- [Terms of Use](https://marueworks.com/n3bridge/terms/)
+
 ## Operator
 
 - Legal name: Takahisa Eguchi
