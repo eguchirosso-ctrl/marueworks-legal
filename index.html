@@ -3,10 +3,52 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="MARUE WORKSが提供するアプリの法務文書">
+  <meta name="description" content="MARUE WORKSが提供するアプリの法務文書とサポートページ">
   <meta name="robots" content="index, follow">
-  <title>MARUE WORKS 法務文書</title>
+  <title>MARUE WORKS 法務文書・サポート</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    .app-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+      margin-top: 28px;
+    }
+
+    .app-card {
+      padding: 28px;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: var(--paper);
+      box-shadow: var(--shadow);
+    }
+
+    .app-card h2 {
+      margin: 0 0 12px;
+      color: var(--navy);
+      font-size: 1.3rem;
+    }
+
+    .app-card ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .app-card li + li {
+      margin-top: 6px;
+    }
+
+    @media (max-width: 680px) {
+      .app-list {
+        grid-template-columns: 1fr;
+      }
+
+      .app-card {
+        padding: 24px;
+      }
+    }
+  </style>
 </head>
 <body>
   <header class="site-header">
@@ -17,27 +59,46 @@
 
   <main class="container home">
     <section class="hero">
-      <p class="eyebrow">AIサブスクノート</p>
-      <h1>法務文書</h1>
-      <p>「AIサブスクノート」の利用規約とプライバシーポリシーを掲載しています。</p>
+      <p class="eyebrow">MARUE WORKS</p>
+      <h1>法務文書・サポート</h1>
+      <p>MARUE WORKSが提供するアプリの利用規約、プライバシーポリシー、サポートページを掲載しています。</p>
     </section>
 
-    <section class="document-links" aria-label="公開文書">
-      <a class="document-card" href="privacy-policy.html">
-        <span>Privacy Policy</span>
-        <strong>プライバシーポリシー</strong>
-        <p>利用者情報、端末内データ、外部サービス等の取扱いについて説明します。</p>
-      </a>
-      <a class="document-card" href="terms-of-use.html">
-        <span>Terms of Use</span>
-        <strong>利用規約</strong>
-        <p>サブスクリプション、料金、無料体験、データの取扱い等の利用条件を定めます。</p>
-      </a>
-      <a class="document-card" href="support.html">
-        <span>Support</span>
-        <strong>サポート</strong>
-        <p>よくある質問、データ管理、購入の復元、お問い合わせ先をご案内します。</p>
-      </a>
+    <section class="app-list" aria-label="アプリ一覧">
+      <article class="app-card">
+        <h2>デジもの手帳</h2>
+        <ul>
+          <li><a href="gadget-life-note/support/">サポート</a></li>
+          <li><a href="gadget-life-note/privacy/">プライバシーポリシー</a></li>
+          <li><a href="gadget-life-note/terms/">利用規約</a></li>
+        </ul>
+      </article>
+
+      <article class="app-card">
+        <h2>Myグルメレポート</h2>
+        <ul>
+          <li><a href="my-gourmet-report/support/">サポート</a></li>
+          <li><a href="my-gourmet-report/privacy/">プライバシーポリシー</a></li>
+        </ul>
+      </article>
+
+      <article class="app-card">
+        <h2>Gadgetory</h2>
+        <ul>
+          <li><a href="gadgetory/support/">Support</a></li>
+          <li><a href="gadgetory/privacy/">Privacy Policy</a></li>
+          <li><a href="gadgetory/terms/">Terms of Use</a></li>
+        </ul>
+      </article>
+
+      <article class="app-card">
+        <h2>N3 Bridge</h2>
+        <ul>
+          <li><a href="n3bridge/support/">Support</a></li>
+          <li><a href="n3bridge/privacy/">Privacy Policy</a></li>
+          <li><a href="n3bridge/terms/">Terms of Use</a></li>
+        </ul>
+      </article>
     </section>
 
     <section class="operator">

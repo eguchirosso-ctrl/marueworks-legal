@@ -4,12 +4,6 @@ MARUE WORKS のアプリの公開用法務文書とサポートページです�
 
 - [公開サイト](https://marueworks.com/)
 
-### AIサブスクノート
-
-- [サポート](https://marueworks.com/support.html)
-- [プライバシーポリシー](https://marueworks.com/privacy-policy.html)
-- [利用規約](https://marueworks.com/terms-of-use.html)
-
 ### Myグルメレポート
 
 - [サポート](https://marueworks.com/my-gourmet-report/support/)
