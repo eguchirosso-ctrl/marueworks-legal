@@ -4,8 +4,9 @@ MARUE WORKS のアプリの公開用法務文書とサポートページです�
 
 - [公開サイト](https://marueworks.com/)
 
-### 共通プライバシーポリシー（全アプリ共通）
+### 共通サポート・プライバシーポリシー（全アプリ共通）
 
+- [サポート](https://marueworks.com/support.html) — App Store Connect / Google Play Console の「サポート URL」に使用
 - [プライバシーポリシー](https://marueworks.com/privacy-policy.html) — App Store Connect / Google Play Console の「プライバシーポリシー URL」に使用
 
 ### Myグルメレポート
