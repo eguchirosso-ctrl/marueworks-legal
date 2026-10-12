@@ -53,3 +53,4 @@ a:focus-visible,summary:focus-visible,.shot-scroller:focus-visible{outline:3px s
 @media(max-width:360px){.feature-grid{grid-template-columns:1fr}.hero-proof span{font-size:8.5px}}
 main h2>span,.final-action>p span{display:inline-block}
 @media(max-width:640px){.final-cta-card h2{font-size:clamp(24px,7.2vw,30px);line-height:1.4}}
+.final-action .store-links{margin-top:10px}.final-action .store-link{color:#fff}

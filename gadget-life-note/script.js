@@ -1,9 +1,7 @@
 (() => {
   // ストアURLの設定箇所はここだけです。
   const APP_STORE_URL = 'https://apps.apple.com/jp/app/%E3%83%87%E3%82%B8%E3%82%82%E3%81%AE%E6%89%8B%E5%B8%B3/id6802090072';
-  // Google Play公開後、正式URLを入れるとGoogle Playボタンが有効になります（空のあいだは「審査中」表示）。
-  // 例: 'https://play.google.com/store/apps/details?id=com.marueworks.gadgetlifenote'
-  const GOOGLE_PLAY_URL = '';
+  const GOOGLE_PLAY_URL = 'https://play.google.com/store/apps/details?id=com.marueworks.gadgetlifenote';
 
   const params = new URLSearchParams(location.search);
 
@@ -68,7 +66,7 @@
       link.href = playHref;
       link.classList.remove('is-disabled');
       link.removeAttribute('aria-disabled');
-      link.textContent = 'Google Playで見る';
+      link.textContent = 'Google Playでダウンロード';
       link.target = '_blank';
       link.rel = 'noopener';
     });
