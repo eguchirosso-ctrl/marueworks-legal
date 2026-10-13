@@ -27,24 +27,35 @@
   const VARIANTS = {
     warranty: {
       title: '<span>保証期限、</span><span>「いつまで？」を</span><br><em><span>すぐ確認。</span></em>',
-      lead: '購入日・保証期限・レシートを、デジものごとにひとまとめ。期限が近づいたら通知でお知らせ（設定でオン）。あとから探さないための記録アプリです。'
+      lead: '購入日・保証期限・レシートを、デジものごとにひとまとめ。期限が近づいたら通知でお知らせ（設定でオン）。あとから探さないための記録アプリです。',
+      visual: 'assets/shot-06.webp',
+      visualAlt: '保証期限の通知設定を確認できるデジもの手帳の設定画面'
     },
     repair: {
       title: '<span>修理した日も、</span><span>費用も。</span><br><em><span>あとから迷わない。</span></em>',
-      lead: '修理・バッテリー交換・メンテナンスを、1台ごとの履歴として記録。購入日や保証期限、レシートもまとめて残せます。'
+      lead: '修理・バッテリー交換・メンテナンスを、1台ごとの履歴として記録。購入日や保証期限、レシートもまとめて残せます。',
+      visual: 'assets/shot-05.webp',
+      visualAlt: 'バッテリー交換の履歴とレシート・保証書をまとめた詳細画面'
     },
     organize: {
       title: '<span>増えたデジものを、</span><br><em><span>すっきり一覧化。</span></em>',
-      lead: 'スマホ、パソコン、イヤホン、カメラ、ゲーム機。写真付きでまとめて、検索・並べ替えで必要なときにすぐ見つけられます。'
+      lead: 'スマホ、パソコン、イヤホン、カメラ、ゲーム機。写真付きでまとめて、検索・並べ替えで必要なときにすぐ見つけられます。',
+      visual: 'assets/shot-02.webp',
+      visualAlt: '検索と並べ替えで持ちものを探せるデジもの一覧画面'
     }
   };
   const content = (params.get('utm_content') || '').toLowerCase();
   const variant = Object.prototype.hasOwnProperty.call(VARIANTS, content) ? VARIANTS[content] : null;
   const heroTitle = document.getElementById('hero-title');
   const heroLead = document.getElementById('hero-lead');
+  const heroShot = document.getElementById('hero-shot');
   if (variant && heroTitle && heroLead) {
     heroTitle.innerHTML = variant.title;
     heroLead.textContent = variant.lead;
+    if (heroShot) {
+      heroShot.src = variant.visual;
+      heroShot.alt = variant.visualAlt;
+    }
     document.documentElement.dataset.variant = content;
   }
 

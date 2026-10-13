@@ -54,20 +54,122 @@ a:focus-visible,summary:focus-visible,.shot-scroller:focus-visible{outline:3px s
 main h2>span,.final-action>p span{display:inline-block}
 @media(max-width:640px){.final-cta-card h2{font-size:clamp(24px,7.2vw,30px);line-height:1.4}}
 .final-action .store-links{margin-top:10px}.final-action .store-link{color:#fff}
-/* 画像の切り抜き防止：各画像を元の縦横比のまま全体表示する（cover によるクロップをやめる） */
+/* ===== 広告流入向け完成版：実UIを主役にした画面設計 ===== */
 .hero-phone img{object-fit:contain}
-.hero-phone-main{width:auto;height:560px;aspect-ratio:852/1846;top:20px}
-.hero-phone-side{width:auto;height:340px;aspect-ratio:852/1846}
-.story-visual{padding:30px 24px}
-.story-visual img{width:auto;height:560px;max-width:72%;max-height:none;object-fit:contain}
-.shot-scroller{display:flex;align-items:flex-start}
-.shot-scroller figure{flex:0 0 auto}
-.shot-scroller img{width:auto;height:560px;max-width:none;aspect-ratio:auto 852/1846;object-fit:contain}
-.shot-scroller img[width="941"]{aspect-ratio:auto 941/1672}
+.hero-phone-main{width:auto;height:560px;aspect-ratio:941/1672;top:20px}
+.hero-phone-side{width:auto;height:340px;aspect-ratio:941/1672}
+
+/* ギャラリーは元画像の比率に左右されない共通カードへ統一。 */
+.shot-scroller{display:grid;grid-auto-flow:column;grid-auto-columns:286px;align-items:stretch;gap:18px}
+.shot-scroller figure{display:grid;grid-template-rows:auto 1fr;margin:0;padding:10px;background:rgba(255,253,250,.86);border:1px solid var(--line);border-radius:28px;box-shadow:0 14px 34px rgba(67,43,30,.07)}
+.shot-frame{width:100%;aspect-ratio:9/16;display:grid;place-items:center;overflow:hidden;border-radius:20px;background:#f2e9e1}
+.shot-scroller .shot-frame img{width:100%;height:100%;max-width:none;object-fit:contain;aspect-ratio:auto;border:0;border-radius:20px;box-shadow:none}
+.shot-scroller figcaption{min-height:62px;padding:12px 5px 2px}
+
+/* Storyは横長パネルいっぱいに端末を拡大し、画像内コピーは見せない。 */
+.product-story .story-row{grid-template-columns:minmax(0,.84fr) minmax(0,1.16fr);gap:64px}
+.product-story .story-row.reverse{grid-template-columns:minmax(0,1.16fr) minmax(0,.84fr)}
+.story-copy{max-width:500px}
+.story-note{max-width:500px;grid-area:note}
+.story-note .mini-notification{margin-top:24px}
+#warranty{grid-template-areas:"copy visual" "note visual";column-gap:64px;row-gap:0;align-items:start}
+#warranty .story-copy{grid-area:copy}
+#warranty .story-visual{grid-area:visual;align-self:stretch}
+.story-visual{min-height:610px;padding:0}
+.story-visual.ui-focus{isolation:isolate}
+.story-visual.ui-focus::after{content:"";position:absolute;inset:0;z-index:3;pointer-events:none;box-shadow:inset 0 0 0 1px rgba(255,255,255,.28)}
+.story-visual.ui-focus img{position:absolute;z-index:2;left:50%;top:50%;width:140%;height:auto;max-width:none;max-height:none;object-fit:initial;border-radius:30px;box-shadow:0 28px 60px rgba(58,38,28,.16);transform:translate(-50%,calc(-50% + var(--focus-shift,0px))) rotate(.35deg)}
+.story-row.reverse .story-visual.ui-focus img{transform:translate(-50%,calc(-50% + var(--focus-shift,0px))) rotate(-.35deg)}
+.ui-focus-warranty{--focus-shift:-220px}
+.ui-focus-repair{--focus-shift:-120px}
+.ui-focus-list{--focus-shift:10px}
+.ui-focus-settings{--focus-shift:-210px}
+
+@media(max-width:1100px) and (min-width:981px){
+  .product-story .story-row,.product-story .story-row.reverse{gap:48px}
+  #warranty{column-gap:48px;row-gap:0}
+  .story-visual{min-height:570px}
+  .ui-focus-warranty{--focus-shift:-180px}
+  .ui-focus-repair{--focus-shift:-95px}
+  .ui-focus-settings{--focus-shift:-170px}
+}
+
+@media(max-width:980px){
+  .product-story .story-row,.product-story .story-row.reverse{grid-template-columns:1fr;gap:32px}
+  #warranty{grid-template-areas:"copy" "visual" "note";row-gap:28px}
+  .story-copy{max-width:720px}
+  .story-note{max-width:720px}
+  .story-visual{min-height:560px}
+  .story-visual.ui-focus img{width:112%}
+  .ui-focus-warranty{--focus-shift:-170px}
+  .ui-focus-repair{--focus-shift:-95px}
+  .ui-focus-list{--focus-shift:10px}
+  .ui-focus-settings{--focus-shift:-150px}
+}
+
 @media(max-width:640px){
-  .hero-phone-main{height:400px;top:14px}
-  .hero-phone-side{height:240px}
-  .story-visual{padding:24px 16px}
-  .story-visual img{max-width:78%;height:420px}
-  .shot-scroller img{height:500px}
+  .section-pad{padding:74px 0}
+
+  /* 390px前後でも、CTA直後から実アプリUIが見える高さに圧縮。 */
+  .hero{padding:18px 0 26px}
+  .hero-grid{gap:10px}
+  .availability-row{font-size:10.5px;line-height:1.45;margin-bottom:8px;gap:7px}
+  .hero .kicker{font-size:10px;margin:0}
+  .hero h1{font-size:clamp(29px,8.25vw,34px);line-height:1.18;margin:5px 0 9px}
+  .hero-lead{font-size:13.5px;line-height:1.58;margin-bottom:12px}
+  .hero-proof{gap:6px;margin-bottom:12px}
+  .hero-proof div{min-height:47px;padding:8px 7px;justify-content:center}
+  .hero-proof strong{font-size:15px}
+  .hero-proof span{font-size:8.5px;margin-top:3px}
+  .hero .download-primary{min-height:56px;padding:10px 16px;border-radius:15px}
+  .hero .cta-main{font-size:16px}
+  .hero .store-links{display:none}
+  .hero .cta-note{font-size:10px;margin:6px 2px 0}
+  .hero-visual{height:338px;margin-top:0;overflow:visible}
+  .orbit-a{width:300px;height:300px;right:-86px;top:2px}
+  .orbit-b{width:230px;height:230px;left:-54px;bottom:0}
+  .hero-phone-main{width:250px;height:328px;aspect-ratio:auto;right:14px;top:0;border-radius:27px}
+  .hero-phone-main img{position:absolute;left:50%;top:-138px;width:142%;height:auto;max-width:none;object-fit:initial;transform:translateX(-50%)}
+  .hero-phone-side{width:112px;height:180px;aspect-ratio:auto;left:0;bottom:9px;border-radius:18px}
+  .hero-phone-side img{width:100%;height:100%;object-fit:cover}
+  .floating-tag{font-size:9px;padding:7px 9px}
+  .floating-tag span{width:17px;height:17px}
+  .tag-one{right:0;top:52px}
+  .tag-two{right:-1px;bottom:15px}
+
+  .gallery-topline{margin-bottom:28px}
+  .shot-scroller{grid-auto-columns:82%;gap:14px;padding-bottom:22px}
+  .shot-scroller figure{padding:9px;border-radius:24px}
+  .shot-frame{border-radius:18px}
+  .shot-scroller .shot-frame img{border-radius:18px}
+  .shot-scroller figcaption{min-height:60px;padding:11px 4px 1px}
+
+  .story-row{margin-top:68px}
+  .product-story .story-row,.product-story .story-row.reverse{gap:26px}
+  #warranty{row-gap:26px}
+  .story-copy h3{font-size:29px}
+  .story-visual{min-height:500px;border-radius:26px}
+  .story-visual.ui-focus img{width:145%;border-radius:24px}
+  .ui-focus-warranty{--focus-shift:-180px}
+  .ui-focus-repair{--focus-shift:-45px}
+  .ui-focus-list{--focus-shift:12px}
+  .ui-focus-settings{--focus-shift:-100px}
+
+  .mobile-install{left:8px;right:8px;bottom:max(8px,env(safe-area-inset-bottom));padding:7px 7px 7px 9px;border-radius:16px}
+  .mobile-install img{width:42px;height:42px}
+  body.has-mobile-install{padding-bottom:80px}
+}
+
+@media(max-width:430px){
+  .container{width:min(calc(100% - 24px),var(--max))}
+  .hero-phone-main{right:10px}
+  .shot-scroller{grid-auto-columns:82%}
+}
+
+@media(max-width:380px){
+  .hero h1{font-size:28px}
+  .hero-lead{font-size:13px}
+  .hero-phone-main{width:238px;right:7px}
+  .hero-phone-side{width:104px}
+  .tag-one{right:-2px}
 }

@@ -27,7 +27,7 @@
   <meta name="twitter:image" content="https://marueworks.com/gadget-life-note/assets/hero.png" />
   <meta name="twitter:image:alt" content="デジもの手帳のアプリ画面と、パソコン・カメラ・イヤホン・スマートウォッチ" />
 
-  <link rel="preload" href="assets/shot-01.png" as="image" fetchpriority="high" />
+  <link rel="preload" href="assets/shot-01.webp" as="image" type="image/webp" fetchpriority="high" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -81,10 +81,10 @@
           <div class="visual-orbit orbit-a"></div>
           <div class="visual-orbit orbit-b"></div>
           <div class="hero-phone hero-phone-main">
-            <img src="assets/shot-01.png" alt="デジもの手帳のホーム画面。最近登録したものと、保証期限が近いものを確認できます。" width="852" height="1846" fetchpriority="high" />
+            <img id="hero-shot" src="assets/shot-01.webp" alt="デジもの手帳のホーム画面。最近登録したデジものを確認できます。" width="941" height="1672" fetchpriority="high" />
           </div>
           <div class="hero-phone hero-phone-side">
-            <img src="assets/shot-04.png" alt="保証期限が近いデジものを表示するホーム画面" width="852" height="1846" />
+            <img src="assets/shot-03.webp" alt="写真付きでデジものを登録する画面" width="941" height="1672" />
           </div>
           <div class="floating-tag tag-one"><span>✓</span>保証期限を記録</div>
           <div class="floating-tag tag-two"><span>✓</span>修理履歴もひとまとめ</div>
@@ -163,12 +163,12 @@
           <p>毎日開かなくても、久しぶりに使ったときに迷わない。情報量を整理し、必要な操作を見つけやすくしています。</p>
         </div>
         <div class="shot-scroller" aria-label="アプリ画面ギャラリー（横にスクロールできます）" tabindex="0">
-          <figure><img src="assets/shot-01.png" alt="ホーム画面" width="852" height="1846" loading="lazy"><figcaption><strong>ホーム</strong><span>保証期限が近いものも確認</span></figcaption></figure>
-          <figure><img src="assets/shot-02.png" alt="一覧画面" width="852" height="1846" loading="lazy"><figcaption><strong>一覧</strong><span>検索・並べ替えですぐ見つかる</span></figcaption></figure>
-          <figure><img src="assets/shot-03.png" alt="登録画面" width="941" height="1672" loading="lazy"><figcaption><strong>登録</strong><span>名前だけで始められる</span></figcaption></figure>
-          <figure><img src="assets/shot-04.png" alt="保証期限が近いものの表示" width="852" height="1846" loading="lazy"><figcaption><strong>保証期限</strong><span>残り日数をひと目で確認</span></figcaption></figure>
-          <figure><img src="assets/shot-05.png" alt="詳細画面と履歴" width="852" height="1846" loading="lazy"><figcaption><strong>履歴</strong><span>修理やメンテナンスを追記</span></figcaption></figure>
-          <figure><img src="assets/shot-06.png" alt="設定画面" width="941" height="1672" loading="lazy"><figcaption><strong>設定</strong><span>通知やバックアップもシンプル</span></figcaption></figure>
+          <figure><div class="shot-frame"><img src="assets/shot-01.webp" alt="ホーム画面" width="941" height="1672" loading="lazy"></div><figcaption><strong>ホーム</strong><span>最近のデジものをひと目で確認</span></figcaption></figure>
+          <figure><div class="shot-frame"><img src="assets/shot-02.webp" alt="一覧画面" width="941" height="1672" loading="lazy"></div><figcaption><strong>一覧</strong><span>検索・並べ替えですぐ見つかる</span></figcaption></figure>
+          <figure><div class="shot-frame"><img src="assets/shot-03.webp" alt="登録画面" width="941" height="1672" loading="lazy"></div><figcaption><strong>登録</strong><span>名前だけで始められる</span></figcaption></figure>
+          <figure><div class="shot-frame"><img src="assets/shot-04.webp" alt="購入・保証・費用の情報をまとめる詳細画面" width="941" height="1672" loading="lazy"></div><figcaption><strong>保証情報</strong><span>購入記録と一緒に確認</span></figcaption></figure>
+          <figure><div class="shot-frame"><img src="assets/shot-05.webp" alt="修理履歴と書類を記録した詳細画面" width="941" height="1672" loading="lazy"></div><figcaption><strong>履歴</strong><span>修理やメンテナンスを追記</span></figcaption></figure>
+          <figure><div class="shot-frame"><img src="assets/shot-06.webp" alt="設定画面" width="941" height="1672" loading="lazy"></div><figcaption><strong>設定</strong><span>通知やバックアップもシンプル</span></figcaption></figure>
         </div>
       </div>
     </section>
@@ -182,14 +182,16 @@
             <h3>保証期限を、<br>忘れにくく。</h3>
             <p>保証期限を登録すると、一覧や詳細に「あと◯日」「本日まで」「保証終了」と表示。設定で通知をオンにすると、保証期限の30日前・7日前・前日に端末の通知でお知らせします。</p>
             <ul class="check-list"><li>残り日数をひと目で確認</li><li>「保証期限が近い順」に並べ替え</li><li>30日前・7日前・前日に通知（設定でオン）</li></ul>
+          </div>
+          <div class="story-visual story-visual-a ui-focus ui-focus-warranty">
+            <img src="assets/shot-03.webp" alt="デジもの登録時に保証期限を入力できる画面" width="941" height="1672" loading="lazy" />
+          </div>
+          <div class="story-note">
             <div class="mini-notification" aria-hidden="true">
               <span class="bell">◌</span>
               <div><strong>保証期限のお知らせ</strong><span>ワイヤレスイヤホンの保証期限まであと30日です</span></div>
             </div>
             <p class="fine-print">※ 通知は初期状態ではオフです。端末の設定や状態によっては届かない場合があります。表示はご自身で入力した日付にもとづくもので、メーカー保証を照会するものではありません。</p>
-          </div>
-          <div class="story-visual story-visual-a">
-            <img src="assets/shot-04.png" alt="保証期限が近いデジものを「あと8日」と表示するホーム画面" width="852" height="1846" loading="lazy" />
           </div>
         </div>
 
@@ -201,8 +203,8 @@
             <p>購入・修理・バッテリー交換・アクセサリー追加・清掃やメンテナンス・故障・売却。1台ごとのできごとを時系列のタイムラインで残せます。</p>
             <ul class="check-list"><li>修理・メンテナンスの日付と内容</li><li>かかった費用の記録</li><li>所有期間と実質かかった金額の表示</li></ul>
           </div>
-          <div class="story-visual story-visual-b">
-            <img src="assets/shot-05.png" alt="デジものの詳細画面。購入から現在までの記録と「履歴を追加」ボタン" width="852" height="1846" loading="lazy" />
+          <div class="story-visual story-visual-b ui-focus ui-focus-repair">
+            <img src="assets/shot-05.webp" alt="デジものの詳細画面。バッテリー交換の履歴とレシート・保証書" width="941" height="1672" loading="lazy" />
           </div>
         </div>
 
@@ -231,8 +233,8 @@
             <p>持っているデジものを写真付きの一覧で確認。名前・メーカー・型番で検索でき、新しい順・購入日順・名前順・保証期限が近い順に並べ替えられます。</p>
             <ul class="check-list"><li>名前・メーカー・型番で検索</li><li>4種類の並べ替え</li><li>手放したものは「保管庫」に記録を残せる</li></ul>
           </div>
-          <div class="story-visual story-visual-a">
-            <img src="assets/shot-02.png" alt="デジものの一覧画面。検索欄と並べ替えボタン" width="852" height="1846" loading="lazy" />
+          <div class="story-visual story-visual-a ui-focus ui-focus-list">
+            <img src="assets/shot-02.webp" alt="デジものの一覧画面。検索欄と並べ替えボタン" width="941" height="1672" loading="lazy" />
           </div>
         </div>
 
@@ -245,8 +247,8 @@
             <ul class="check-list"><li>記録と写真を1つのファイルに</li><li>iPhoneは「ファイル」（iCloud Driveなど）、Androidは端末内やGoogle ドライブなどに保存</li><li>復元は追加のみ。今ある記録は書き換わりません</li></ul>
             <p class="fine-print">※ 自動のクラウド同期機能ではありません。バックアップファイルはご自身で作成・保管してください。</p>
           </div>
-          <div class="story-visual story-visual-b">
-            <img src="assets/shot-06.png" alt="設定画面。保証期限の通知、購入を復元、バックアップと復元の項目" width="941" height="1672" loading="lazy" />
+          <div class="story-visual story-visual-b ui-focus ui-focus-settings">
+            <img src="assets/shot-06.webp" alt="設定画面。保証期限の通知、購入を復元、バックアップと復元の項目" width="941" height="1672" loading="lazy" />
           </div>
         </div>
       </div>
