@@ -54,3 +54,20 @@ a:focus-visible,summary:focus-visible,.shot-scroller:focus-visible{outline:3px s
 main h2>span,.final-action>p span{display:inline-block}
 @media(max-width:640px){.final-cta-card h2{font-size:clamp(24px,7.2vw,30px);line-height:1.4}}
 .final-action .store-links{margin-top:10px}.final-action .store-link{color:#fff}
+/* 画像の切り抜き防止：各画像を元の縦横比のまま全体表示する（cover によるクロップをやめる） */
+.hero-phone img{object-fit:contain}
+.hero-phone-main{width:auto;height:560px;aspect-ratio:852/1846;top:20px}
+.hero-phone-side{width:auto;height:340px;aspect-ratio:852/1846}
+.story-visual{padding:30px 24px}
+.story-visual img{width:auto;height:560px;max-width:72%;max-height:none;object-fit:contain}
+.shot-scroller{display:flex;align-items:flex-start}
+.shot-scroller figure{flex:0 0 auto}
+.shot-scroller img{width:auto;height:560px;max-width:none;aspect-ratio:auto 852/1846;object-fit:contain}
+.shot-scroller img[width="941"]{aspect-ratio:auto 941/1672}
+@media(max-width:640px){
+  .hero-phone-main{height:400px;top:14px}
+  .hero-phone-side{height:240px}
+  .story-visual{padding:24px 16px}
+  .story-visual img{max-width:78%;height:420px}
+  .shot-scroller img{height:500px}
+}
